@@ -27,7 +27,7 @@ function _update()
 end
 
 function _draw()
-    cls(0)
+    cls(1)
     for o in all(p) do
         o:draw()
     end
