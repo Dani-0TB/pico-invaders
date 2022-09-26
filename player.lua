@@ -1,11 +1,12 @@
 function create_player()
     -- initialize player variables
-    local p = new_object(60,120)
+    local p = new_object(60,116)
     p.sp = 1
     p.w = 7
     p.h = 7
     p.speed = 2
     p.blt = new_bullet(p.x, -1)
+    
     -- Player logic
     p.update = function(self)
         -- Check for input and apply speed
@@ -23,14 +24,13 @@ function create_player()
         if self.x > 121 then
             self.x = 121
         end
-        
+        -- shooting
         if btnp(4) then
             if not self.blt.active then
                 self:shoot()
                 sfx(0)
             end
         end
-
         self.blt:update()
     end
 
