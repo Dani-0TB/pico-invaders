@@ -35,13 +35,13 @@ end
 
 function make_enemies()
     et = {}
-    local x = 7
+    local x = 6
     local y = 8
-    local xoff = 12
+    local xoff = 15
     local yoff = 8
     for row=0,6 do
         t = {}
-        for cell=0,9 do
+        for cell=0,7 do
             if row < 3 then
                 add(t,create_enemy(x + xoff * cell, y + yoff * row, 8, 8, 2, 100))
             else

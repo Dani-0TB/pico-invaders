@@ -42,7 +42,7 @@ function create_player()
 
     p.shoot = function(self)
         self.blt.x = self.x + self.w / 2
-        self.blt.y = self.y
+        self.blt.y = self.y-1
         self.blt.active = true
     end
 

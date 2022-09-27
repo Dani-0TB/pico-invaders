@@ -19,5 +19,17 @@ function new_bullet(x,y)
             self.y > o.y and self.y < o.y + 7 then return true end
         return false
     end
+
+    b.collide_barrier = function(self, offset)
+        if pget(self.x,self.y-offset) == 11 then
+            return true
+        end
+        return false
+    end
+
+    b.deactivate = function(self)
+        self.active = false
+        self.y = -1
+    end
     return b
 end
