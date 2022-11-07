@@ -36,16 +36,16 @@ end
 function make_enemies()
     et = {}
     local x = 7
-    local y = 8
+    local y = 16
     local xoff = 12
     local yoff = 8
     for row=0,6 do
         t = {}
-        for cell=0,9 do
+        for cell=0,8 do
             if row < 3 then
-                add(t,create_enemy(x + xoff * cell, y + yoff * row, 8, 8, 2, 100))
+                add(t,create_enemy(x + xoff * cell, y + yoff * row, 8, 8, 2, 20))
             else
-                add(t,create_enemy(x + xoff * cell, y + yoff * row, 8, 8, 4, 75))
+                add(t,create_enemy(x + xoff * cell, y + yoff * row, 8, 8, 4, 10))
             end
             
         end

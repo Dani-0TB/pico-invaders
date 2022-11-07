@@ -11,8 +11,7 @@ function _init()
     add(p, create_player())
 end
 
-function _update()
-    if 
+function _update() 
     tick_timer()
     if btnp(2) then
         interval += 1
@@ -42,7 +41,7 @@ function _update()
 end
 
 function _draw()
-    cls(0)
+    cls(1)
     for o in all(p) do
         o:draw()
     end
@@ -63,6 +62,7 @@ function tick_timer()
 end
 
 function print_ui()
-    print("level: "..level, 0,0,6)
-    print("score: "..score, 60,0,6)
+    rectfill(0,0,127,6,0)
+    print("level: "..level, 4,1,6)
+    print("score: "..score, 54,1,6)
 end
